@@ -1,0 +1,36 @@
+.ALL{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:center;
+	align-items: center;
+}
+
+.contain{
+		text-align: center;
+		padding: 5%;
+}
+
+main{
+  width: 60%;
+  margin: auto;
+}
+
+.recherche input  {
+   background-color: silver;
+}
+
+.recherche div{
+  padding: 0.3%;
+}
+
+.recherche{
+  display: flex;
+	flex-wrap: row;
+	justify-content: center;
+  border-color: black;
+}
+
+.recherche :hover {
+     background-color: red;
+     border-color: #FAFF00;
+}

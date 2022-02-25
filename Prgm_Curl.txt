@@ -1,0 +1,39 @@
+//curl = curl_easy_init(); => Démarre une session libcurl.
+//curl_easy_setopt(); => Définit les options pour une poignée curl.
+//CURLOPT_URL => URL de ce transfert.
+//CURLOPT_WRITEDATA => pointeur passé au rappel d'écriture.
+//URLOPT_FAILONERROR => Echec de la demande sur la réponse HTTP.
+//curl_easy_perform => Effectue un transfert de fichier bloquant.
+//CURLE_OK => Tout va bien.
+//curl_easy_strerror => Chaîne de caractère décrivant l'erreur.
+//curl_easy_cleanup = > Dernière fonction à mettre, contraire de curl_easy_init().
+
+#include <stdio.h>
+#include <curl/curl.h>
+
+int main (int argc, char**argv){
+
+int result;
+
+CURL *curl;
+FILE *fp;
+fp = fopen("image.jpeg","wb");
+
+curl = curl_easy_init(); //Démarre une session libcurl
+
+curl_easy_setopt(curl, CURLOPT_URL, "https://upload.wikimedia.org/wikipedia/commons/1/14/Un_super_paysage.jpeg");
+curl_easy_setopt(curl, CURLOPT_WRITEDATA, fp);
+curl_easy_setopt(curl, CURLOPT_FAILONERROR, 1L);
+
+result = curl_easy_perform(curl);
+
+if(result == CURLE_OK)
+printf("Telechargement FAIT !\n");
+else
+printf("Une erreur est survenu : %s\n", curl_easy_strerror(result));
+
+fclose(fp);
+
+curl_easy_cleanup(curl);
+
+}

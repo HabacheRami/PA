@@ -1,0 +1,38 @@
+.contain{
+  margin: 2% auto 14px;
+  background-color: #40CCEB;
+  border-radius: 20px;
+  width: 60%;
+  padding: 2%;
+}
+
+.corps{
+  display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.contain h4{
+  text-align: center;
+}
+
+main{
+  width: 90%;
+  margin: auto;
+}
+
+.description{
+  width: 50%;
+
+}
+
+button{
+  background-color: transparent;
+  width: 100%;
+  border-color: transparent;
+
+}
+
+.rounded-circle{
+  width: 20%;
+}

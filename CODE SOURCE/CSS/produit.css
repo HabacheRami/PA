@@ -1,0 +1,60 @@
+.coordonnées{
+  margin: 5% auto 14px;
+  background-color: #40CCEB;
+  border-radius: 20px;
+  width: 50%;
+}
+
+.coordonnées  select, .coordonnées input{
+  height: 30px;
+  margin : 3%;
+  border : none;
+  margin-left: 5%;
+  border-radius: 4%;
+  font-size: 18px;
+}
+
+.coordonnées  textarea{
+  margin : 5%;
+  border-radius: 4%;
+  font-size: 18px;
+}
+
+label{
+  margin-left: 45px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.envoie{
+  height: 50px;
+  width: 60%;
+  font-size: 20px;
+  border-radius: 6px;
+  background-color: #D30429;
+  color: #FAFF00;
+  border-color: transparent;
+}
+
+main{
+  width: 60%;
+  margin: auto;
+}
+
+.convert{
+  text-align: center;
+  margin: 5% auto 14px;
+  background-color: #40CCEB;
+  border-radius: 20px;
+  width: 80%;
+  font-size: 90px;
+}
+
+.bouton{
+  padding: 2%;
+}
+
+
+textarea{
+  width: 80%;
+}

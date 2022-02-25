@@ -1,0 +1,12 @@
+A la même heure, tous les jours.
+- Fonction Time
+
+Le programme recupère l'intégralité des données des produits présent dans l'entrepot (mise sous format yaml).
+- Avec SELECT * via la BDD.
+- Mise au format YAML.
+
+Ce fichier est ensuite envoyé par mail au Contrôle de Gestion de LoyaltyCard via CURL.
+- Ecrire les données récupérées dans un fichier txt.
+- Envoie par mail.
+
+Ensuite les données sont insérées dans un seul fichier EXCEL, qui est donc actualisé chaque jour.

@@ -1,0 +1,3 @@
+- créer une debian pour faire les serveurs SQL
+
+- créer une debian pour faire un serveur apache pour afficher le site web

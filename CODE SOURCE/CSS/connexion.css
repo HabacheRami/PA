@@ -1,0 +1,53 @@
+
+.bodyconnect{
+  margin: 5% auto 12px;
+  background-color: #40CCEB;
+  border-radius: 20px;
+  width: 30%;
+}
+
+.bodyconnect input{
+  height: 30px;
+  margin : 10px;
+  border : none;
+  margin-left: 40px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.bouton{
+  margin: auto;
+  padding-bottom: 30px;
+  width: 50%;
+}
+
+
+.envoie{
+  height: 50px;
+  width: 90%;
+  font-size: 20px;
+  border-radius: 6px;
+  background-color: #D30429;
+  color: #FAFF00;
+  border-color: transparent;
+}
+
+.title{
+    text-align: center;
+    color: Black;
+    padding: 10px;
+}
+
+label{
+  margin-left: 45px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.email{
+  width: 46%;
+}
+
+.password{
+  width: 50%;
+}

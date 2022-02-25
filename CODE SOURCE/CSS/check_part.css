@@ -1,0 +1,57 @@
+.ALL{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:center;
+	align-items: center;
+}
+
+.contain{
+	text-align: center;
+	background-color: #40CCEB;
+	margin: 3%;
+	border-radius: 15%;
+}
+
+main{
+  width: 80%;
+  margin: auto;
+}
+
+
+.recherche input  {
+   background-color: silver;
+}
+
+.recherche div{
+  padding: 0.3%;
+}
+
+.recherche{
+  display: flex;
+	flex-wrap: row;
+	justify-content: center;
+  border-color: black;
+}
+
+.recherche :hover {
+     background-color: red;
+     border-color: #FAFF00;
+}
+
+.remove{
+  height: 50px;
+  width: auto;
+  font-size: 20px;
+  border-radius: 6px;
+  background-color: #D30429;
+  color: #FAFF00;
+  border-color: transparent;
+	margin: 10%;
+}
+
+
+button{
+  background-color: transparent;
+  width: 100%;
+	border-color: transparent;
+}
