@@ -17,7 +17,7 @@
     <main>
 
 
-    <h2>Ajout d'un partenaire</h2>
+    <h2>Ajout d'un produit</h2>
 
             <?php  include('Includes/result.php'); ?>
 
@@ -30,7 +30,7 @@
 
                 <label> Prix :</label>
                 <div class="price">
-                  <input type="number" name="price" min="0" placeholder="30">
+                  <input type="number" name="price" min="0" step=".01" placeholder="30">
                 </div>
 
                 <label> Description :</label>
