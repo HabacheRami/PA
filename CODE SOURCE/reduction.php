@@ -35,7 +35,7 @@
                   <form action="update_reduction.php" class="coordonnées" method="POST">
                   <label> Montant :</label>
                   <div class="montant">
-                    <input type="number" min="0" name="montant" value="'.$valueq[1].'">
+                    <input type="number" min="0" name="montant" step=".01" value="'.$valueq[1].'">
                   </div>
 
 

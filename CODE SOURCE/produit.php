@@ -43,7 +43,7 @@
                              <label> Prix :</label>
                              <br>
                              <div class="prix">
-                             <input name="prix" type="number" min="0" value="'.$valueq[2].'">
+                             <input name="prix" type="number" min="0" step=".01" value="'.$valueq[2].'">
                              </div>
 
                              <label> Quantité :</label>
