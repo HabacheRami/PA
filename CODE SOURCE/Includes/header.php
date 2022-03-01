@@ -33,8 +33,8 @@ if(!isset($_SESSION['email'])){
 				 echo "<a class='up' href='check_partenaire.php'>Partenaire</a>";
 						echo "<a class='up' href='catalogue.php'>Catalogue</a>";
 						echo "<a class='up' href='users.php'>Utilisateurs</a>";
-						echo "<a class='up' href='entrepot.php'>Entrepots</a>";
-						echo "<a class='up' href='entreprise.php'>Entreprises</a>
+						echo "<a class='up' href='entreprise.php'>Entreprises</a>";
+						echo "<a class='up' href='entrepot.php'>Entrepot</a>
 						<div id='google_translate_element'></div>";
 						echo "<a class='up' href='deconnexion.php'>Déconnexion</a>";
 					}
