@@ -28,7 +28,7 @@
                 <h4>Lien a envoyer au DG de l'entreprise ou a celui qui s'occupe du compte de l'entreprise</h4>
                 <?php
 
-                $link ="http://localhost:8888/PA/CODE%20SOURCE/inscription_entreprise.php?entreprise=".$_GET['entreprise']."&id=".$_GET['id']."";
+                $link ="http://localhost:8888/LoyaltyCard/CODE%20SOURCE/inscription_entreprise.php?entreprise=".$_GET['entreprise']."&id=".$_GET['id']."";
 
 
                 echo $link;

@@ -118,7 +118,6 @@ $reponse = $req->execute([
 
 if($reponse){
 	header('location:index.php?message=Compte créé avec succès !&type=success');
-	echo "http://localhost:8888/PA/CODE%20SOURCE/inscription_client.php?entreprise=".$_GET['entreprise']."";
 	exit;
 }else{
 	header('location:inscription_entreprise.php?message=Il y a eu une erreur.&type=danger');

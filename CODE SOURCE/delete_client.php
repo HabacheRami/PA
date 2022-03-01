@@ -11,6 +11,13 @@ include('Includes/connexion.php');
   ]);
 
 
+  $q = 'DELETE FROM Loyalty WHERE user = :user';
+  $req = $db->prepare($q);
+  $resultat =  $req->execute([
+    'user' => $_POST['email']
+  ]);
+
+
   if($resultat){
     header('location:userList.php?message=User Supprimer.&type=success');
   	exit;

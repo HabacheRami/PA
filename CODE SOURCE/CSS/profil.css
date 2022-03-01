@@ -53,3 +53,10 @@ main{
 .bouton{
   padding: 2%;
 }
+
+.card{
+  background-repeat: no-repeat;
+  background-image: url('./../Images/card.png');
+  background-size: 50%;
+  height: 300px;
+}

@@ -17,11 +17,11 @@
        include('Includes/result.php');
           include('Includes/connexion.php');
 
-
+$_SESSION['entreprise'] = $_GET['entreprise'];
           $q = 'SELECT name FROM USER  WHERE name =:name';
           $req = $db->prepare($q);
           $req->execute([
-            'name' => $_GET['entreprise']
+            'name' =>$_SESSION['entreprise'] 
           ]);
 
 
@@ -31,8 +31,6 @@
            $_SESSION['entreprise'] = $valueq[0];
 
           }
-
-         if ($_GET['entreprise']==$_SESSION['entreprise']){
       ?>
       <div class="title">
         <h2>Inscription de votre entreprise</h2>
@@ -95,10 +93,5 @@
                <input class="envoie" type="submit" value="Enregistrer">
              </div>
           </form>
-    <?php
-  }else {
-    echo "<h1>Entreprise Incorrect</h1>";
-  }
-   include('Includes/footer.php'); ?>
   </body>
 </html>

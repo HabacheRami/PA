@@ -92,6 +92,10 @@
                  ?>
           </div>
 
+            <div class="card">
+<p>fifj</p>
+          </div>
+
           <div class="convert">
             <h3>Convertion des points en €</h3>
 
