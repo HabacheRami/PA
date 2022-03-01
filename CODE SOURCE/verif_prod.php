@@ -87,7 +87,7 @@ $reponse = $req->execute([
 
 
 if($reponse){
-	header('location:stock.php?message=Produit ajouté avec succès !&type=success');
+	header('location:entrepot.php?message=Produit ajouté avec succès !&type=success');
 	exit;
 
 }else{
