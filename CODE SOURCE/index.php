@@ -14,10 +14,12 @@
   </head>
   <body>
     <?php include('Includes/header.php');
-          include('Includes/result.php');
+    include('Includes/result.php');
+          include('Includes/connexion.php');
      ?>
 
           <img class="img_up" src="Images/Img_index.png" style="width:100%;height:100%;">
+
 
     <?php include('Includes/footer.php') ?>
   </body>
