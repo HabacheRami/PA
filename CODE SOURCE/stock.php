@@ -42,11 +42,11 @@
        foreach ($resultsq as $key => $valueq) {
          echo "<form class='contain' action='produit.php' method='post'>";
           echo "<button type='submit'>";
-              echo "<input type='hidden' name='produit' value='" . $valueq[0] . "'>";
+              echo '<input type="hidden" name="produit" value="' . $valueq[0] . '">';
               echo "<input type='hidden' name='entrepot' value='" . $entrepot . "'>";
               echo '<h4>'. $valueq[0].'</h4>';
               echo '<div class="corps">';
-              echo "<img src='export.php?name=". $valueq[0]."' class='rounded-circle'>";
+              echo '<img src="export.php?name='. $valueq[0].'" class="rounded-circle">';
               echo '<p class="description">' .$valueq[2] .'</p>';
               echo '<p class="description">Il en reste ' . $valueq[3] . '</p>';
               echo '<p class="montant">' . $valueq[1] . '€</p>';

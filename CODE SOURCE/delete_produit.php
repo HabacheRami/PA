@@ -18,7 +18,7 @@ include('Includes/connexion.php');
   ]);
 
   if($resultat){
-    header('location:entrepot.php?message=User Supprimer.&type=success');
+    header('location:entrepot.php?message=produit Supprimer.&type=success');
   	exit;
   }else {
     header('location:entrepot.php?message=User est pas supprimer.&type=success');
