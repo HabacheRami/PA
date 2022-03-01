@@ -52,7 +52,7 @@
                              <input name="quantite" type="number" min="0" value="'.$valueq[3].'">
                              </div>';
 
-                             echo "<input type='hidden' name='produit' value='" .$_POST["produit"]. "'>";
+                             echo '<input type="hidden" name="entreprise" value="' .$_POST["entreprise"]. '">';
                              echo '<input type="hidden" name="entrepot" value="' .$_POST["entrepot"]. '">
 
                              <div class="bouton">
