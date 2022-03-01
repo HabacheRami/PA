@@ -69,8 +69,8 @@
 
              <div class="bouton">
                <?php
-                echo "<input type='hidden' name='produit' value='" .$_POST["produit"]. "'>";
-                echo "<input type='hidden' name='entrepot' value='" .$_POST["entrepot"]. "'>";
+               echo '<input type="hidden" name="produit" value="' .$_POST["produit"]. '">';
+               echo '<input type="hidden" name="entrepot" value="' .$_POST["entrepot"]. '">';
 
                 ?>
                <center><input class="envoie" type="submit" value="Suppression du produit"></center>
