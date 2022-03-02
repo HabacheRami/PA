@@ -10,11 +10,16 @@
   font-weight: 700;
   font-size: 140%;
   padding: 2%;
+  text-decoration: none;
+
 }
 
 h2{
   align-items: center;
   text-align: center;
+}
+a{
+  text-decoration: none;
 }
 
 
@@ -30,4 +35,8 @@ h2{
   justify-content: space-around;
   align-items: center;
   margin-right: 10%;
+}
+
+body{
+  margin: 0;
 }

@@ -8,10 +8,6 @@
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/header.css">
     <link rel="stylesheet" href="CSS/userList.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://code.jquery.com/jquery-3.3.1.slim.min.js">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
 
 </head>
   <body>
@@ -31,8 +27,7 @@
 <div class="ALL" id="ALL">
 
 
-        <?php include('Includes/result.php');
-
+        <?php 
                  include('Includes/connexion.php');
 
                  $q = 'SELECT name, firstname, email, points, addresse, country, codepostale, phone, entreprise FROM USER WHERE status = :Cl AND entreprise = :entreprise';
