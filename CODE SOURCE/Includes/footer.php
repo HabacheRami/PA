@@ -1,20 +1,16 @@
 <footer>
   <div class="haut">
-    <div class="container">
-        <div class="row">
-
-          <div class="col-4">
+          <div class="foote">
             <p class="p">LoyaltyCard</p>
             <li><a href="partenaire.php">Partenaire</a></li>
           </div>
 
-          <div class="col-4">
+          <div class="foote">
             <p class="p">AIDE</p>
             <li><a href="conctat.php">Nous contacter</a></li>
           </div>
-      </div>
     </div>
-  </div>
+
 
   <div class="back">
     <div class="foot">

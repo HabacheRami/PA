@@ -1,11 +1,11 @@
-.coordonnées{
+.coordonnÃ©es{
   margin: 5% auto 14px;
   background-color: #40CCEB;
   border-radius: 20px;
   width: 50%;
 }
 
-.coordonnées  select, .coordonnées input{
+.coordonnÃ©es  select, .coordonnÃ©es input{
   height: 30px;
   margin : 3%;
   border : none;
@@ -14,7 +14,7 @@
   font-size: 18px;
 }
 
-.coordonnées  textarea{
+.coordonnÃ©es  textarea{
   margin : 5%;
   border-radius: 4%;
   font-size: 18px;
@@ -65,12 +65,14 @@ main{
 
 #number{
   margin-left: 7%;
+  padding-top: 1%;
+
 }
 
 #barcode{
   margin-left: 25%;
-  margin-top: 38%;
-  margin-bottom: 5%;
+  margin-top: 43%;
+  padding-bottom: 8%;
 }
 
 .b128{

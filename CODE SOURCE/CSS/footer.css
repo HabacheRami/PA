@@ -3,10 +3,10 @@
   font-size: 20px;
 }
 
-.col-4 a {
+.foote a {
   color: white;
 }
-.col-4 li{
+.foote li{
   list-style: none;
   text-align: center;
 }
@@ -39,7 +39,10 @@
 
 .haut{
   background-color: #516FD7;
-  padding-top: 10px;
+  display: flex;
+	flex-wrap: row;
+	justify-content:  space-evenly;
+  padding: 1%;
 }
 
 .foot {
