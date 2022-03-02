@@ -11,7 +11,6 @@
           </div>
     </div>
 
-
   <div class="back">
     <div class="foot">
       <a href="MENTIONS-LEGALES.pdf" target="_blank">Mentions légales</a>
