@@ -1,5 +1,4 @@
 <?php session_start() ?>
-<!DOCTYPE html>
 <html lang="fr">
   <head>
    <meta charset="UTF-8">
@@ -7,7 +6,6 @@
    <title>LoyaltyCard</title>
    <link rel="stylesheet" href="CSS/header.css">
    <link rel="stylesheet" href="CSS/profil.css">
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
   </head>
   <body>
@@ -20,7 +18,6 @@
 
           <div class="cordo">
             <h3>Vos coordonnées :</h3>
-            <?php  include('Includes/result.php'); ?>
 
             <?php
               include('Includes/connexion.php');
@@ -33,7 +30,7 @@
                $resultsq = $reqq->fetchAll();
 
                foreach ($resultsq as $key => $valueq) {
-                  echo ' <form action="update.php" class="coordonnées" method="POST">
+                  echo ' <form action="update.php" class="coordonnees" method="POST">
                      <label> Nom :</label>
                      <div class="name">
                        <input type="text" name="name" value="'. $valueq[0].'">
@@ -90,34 +87,36 @@
                  ?>
           </div>
 
-            <div class="card">
-              <?php
-
-                $q = 'SELECT card, barcode FROM loyalty where user = :user';
-                $req = $db->prepare($q);
-                $req->execute([
-                  'user' => $_SESSION['email']
-                ]);
-                 $results = $req->fetchAll();
-                 foreach ($results as $key => $value) {
-                   echo "<p id='number'>N° carte : ".$value[0]."</p>";
-                   $barcode = $value[1];
-                 }
+          <div class="card">
+            <?php
+            include('Includes/connexion.php');
 
 
-                 echo "<input type='hidden' id='code' value='".$barcode."'>";
-              ?>
+             $q = 'SELECT card, barcode FROM loyalty where user = :user';
+             $req = $db->prepare($q);
+             $req->execute([
+               'user' => $_SESSION['email']
+             ]);
+              $results = $req->fetchAll();
+              foreach ($results as $key => $value) {
+                echo "<p id='number'>N° carte : ".$value[0]."</p>";
+                $barcode = $value[1];
+              }
 
-               <div id="barcode">
 
-               </div>
+              echo "<input type='hidden' id='code' value='".$barcode."'>";
+             ?>
 
-                 <script src="./barcode.js" charset="utf-8"></script>
+             <div id="barcode">
 
-          </div>
+             </div>
+
+             <script src="./barcode.js" charset="utf-8"></script>
+
+         </div>
 
           <div class="convert">
-            <h3>Convertion des points en €</h3>
+            <p class="convert">Convertion des points en €</p>
 
             <?php
 

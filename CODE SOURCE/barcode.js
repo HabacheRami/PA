@@ -44,6 +44,6 @@ var charId = [
     body = body.concat("<td><div class=\"b128\" style=\"border-left-width:",bar[x],";width:", bar[x+1], "\"></div></td>");
   }
 
-  body = body.concat("<tr><td colspan=",bar.length," align=left><font family=arial size=2>",idCard,"</td></tr></table>");
+  body = body.concat("<tr><td colspan=",bar.length," align=left><font size=4>",idCard,"</td></tr></table>");
 
   html.innerHTML = body;
