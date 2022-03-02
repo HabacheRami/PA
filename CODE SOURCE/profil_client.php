@@ -4,13 +4,11 @@
   <head>
    <meta charset="UTF-8">
    <link rel="stylesheet" href="CSS/footer.css">
-   <title>Melimedic - Profil</title>
+   <title>LoyaltyCard</title>
    <link rel="stylesheet" href="CSS/header.css">
    <link rel="stylesheet" href="CSS/profil.css">
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-   <link rel="stylesheet" href="https://code.jquery.com/jquery-3.3.1.slim.min.js">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+
   </head>
   <body>
     <?php include('Includes/header.php');?>
@@ -93,7 +91,29 @@
           </div>
 
             <div class="card">
-<p>fifj</p>
+              <?php
+
+                $q = 'SELECT card, barcode FROM loyalty where user = :user';
+                $req = $db->prepare($q);
+                $req->execute([
+                  'user' => $_SESSION['email']
+                ]);
+                 $results = $req->fetchAll();
+                 foreach ($results as $key => $value) {
+                   echo "<p id='number'>N° carte : ".$value[0]."</p>";
+                   $barcode = $value[1];
+                 }
+
+
+                 echo "<input type='hidden' id='code' value='".$barcode."'>";
+              ?>
+
+               <div id="barcode">
+
+               </div>
+
+                 <script src="./barcode.js" charset="utf-8"></script>
+
           </div>
 
           <div class="convert">

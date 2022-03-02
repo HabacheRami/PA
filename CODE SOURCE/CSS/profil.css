@@ -39,6 +39,8 @@ label{
 main{
   width: 60%;
   margin: auto;
+  flex-direction: row;
+  align-items: center;
 }
 
 .convert{
@@ -56,7 +58,23 @@ main{
 
 .card{
   background-repeat: no-repeat;
+  width: 50%;
   background-image: url('./../Images/card.png');
-  background-size: 50%;
+  background-size: 100%;
   height: 300px;
+  margin-left: 25%;
+}
+
+#number{
+  margin-left: 7%;
+}
+
+#barcode{
+  margin-left: 30%;
+  width: 50%;
+}
+
+div.b128{
+ border-left: 1px black solid;
+ height: 30px;
 }
