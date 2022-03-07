@@ -1,3 +1,10 @@
 - créer une debian pour faire les serveurs SQL
 
 - créer une debian pour faire un serveur apache pour afficher le site web
+
+- pk chaque site à un serveur application et bdd ?
+
+- est-ce que bdd repliqué intéragice avec la bdd principale ?
+
+- en fonction de l'endroit où on est la bdd change ?
+enfaite il faut réexpliquer le schéma   
