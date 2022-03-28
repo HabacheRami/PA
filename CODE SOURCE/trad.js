@@ -34,6 +34,10 @@ function trad() {
   if (document.getElementById('prof')!=null){
     var profil = document.getElementById('prof');
   }
+  if (document.getElementById('demande')!=null){
+    var demande = document.getElementById('demande');
+  }
+
 
   var fr = document.getElementById('fr');
   var en = document.getElementById('en');
@@ -75,7 +79,9 @@ function trad() {
     if (document.getElementById('prof')!=null){
       profil.innerHTML = "Profil";
     }
-
+    if (document.getElementById('demande')!=null){
+      demande.innerHTML = "Demande";
+    }
 
 
     fr.innerHTML="Français";
@@ -118,6 +124,9 @@ function trad() {
     if (document.getElementById('prof')!=null){
       profil.innerHTML = "Profile";
     }
+    if (document.getElementById('demande')!=null){
+      demande.innerHTML = "Demand";
+    }
 
     fr.innerHTML="French";
     en.innerHTL="English";
@@ -158,6 +167,9 @@ function trad() {
     }
     if (document.getElementById('prof')!=null){
       profil.innerHTML = "Perfil";
+    }
+    if (document.getElementById('demande')!=null){
+      demande.innerHTML = "Demanda";
     }
 
     fr.innerHTML="Francia";
@@ -211,6 +223,9 @@ function trad() {
     }
     if (document.getElementById('prof')!=null){
       profil.innerHTML = "Profil";
+    }
+    if (document.getElementById('demande')!=null){
+      demande.innerHTML = "Anforderung";
     }
 
     fr.innerHTML="Frankreich";

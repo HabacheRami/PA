@@ -15,6 +15,10 @@
   font-size: 18px;
 }
 
+input{
+  width: 50%;
+}
+
 .coordonnees  textarea{
   margin : 5%;
   border-radius: 4%;
