@@ -11,7 +11,9 @@
 	margin: 3%;
 	border-radius: 15%;
 }
-
+img{
+	border-radius: 20%;
+}
 main{
   width: 80%;
   margin: auto;

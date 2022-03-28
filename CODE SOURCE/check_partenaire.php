@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="CSS/check_part.css">
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/header.css">
-    <link rel="stylesheet" href="CSS/clavier.css">
   </head>
   <body>
     <?php include('Includes/header.php') ?>
@@ -21,7 +20,7 @@
        <input class='remove' type='submit' value='Ajouter des partenaires'>
      </form>
 
-    
+
 
       <div class="ALL" id="ALL">
       <?php
@@ -38,7 +37,7 @@
           echo '<div class="contain">
           <form action="reduction_admin.php" method="post">
             <button type="submit">';
-              echo '<img src="export.php?name='. $valueq[0].'" class="rounded-circle">
+              echo '<img src="export.php?name='. $valueq[0].'" >
               <input type="hidden" name="partenaire" value="' .$valueq[0]. '">
               </button>
               </form>';

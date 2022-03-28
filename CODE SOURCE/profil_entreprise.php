@@ -1,10 +1,9 @@
 <?php session_start() ?>
-<!DOCTYPE html>
 <html lang="fr">
   <head>
    <meta charset="UTF-8">
    <link rel="stylesheet" href="CSS/footer.css">
-   <title>Melimedic - Profil</title>
+   <title>LoyaltyCard</title>
    <link rel="stylesheet" href="CSS/header.css">
    <link rel="stylesheet" href="CSS/profil.css">
   </head>

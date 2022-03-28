@@ -6,7 +6,6 @@
    <title>LoyaltyCard</title>
    <link rel="stylesheet" href="CSS/header.css">
    <link rel="stylesheet" href="CSS/profil.css">
-
   </head>
   <body>
     <?php include('Includes/header.php');?>
