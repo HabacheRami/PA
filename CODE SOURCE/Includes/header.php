@@ -4,6 +4,8 @@ if(!isset($_SESSION['email'])){
 	session_start();
 }
 
+include('Includes/connexion.php');
+
  ?>
 
 <header>
@@ -38,6 +40,23 @@ if(!isset($_SESSION['email'])){
 
 				}
 			 if($_SESSION['status'] == 'Admin') {
+				 echo "<a class='up'  id='demande' href='demande_admin.php'";
+
+				 $q = 'SELECT count(name) FROM demande';
+			   $req = $db->prepare($q);
+			   $req->execute([]);
+
+
+			   $resultat = $req->fetchAll();
+
+				 foreach ($resultat as $key => $valueq) {
+					 if ($valueq[0]>'0'){
+						 echo " style='color:red';";
+				 }
+			 }	
+
+				 echo">Demande</a>";
+
 				 echo "<a class='up'  id='parte' href='check_partenaire.php'>Partenaire</a>";
 						echo "<a class='up' id='cat' href='catalogue.php'>Catalogue</a>";
 						echo "<a class='up' id='util' href='users.php'>Utilisateurs</a>";

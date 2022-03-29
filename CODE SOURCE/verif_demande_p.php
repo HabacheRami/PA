@@ -47,55 +47,59 @@ if($_POST['res']=='partenaire'){
   	header('location:index.php?message=Compte créé avec succès !&type=success');
   	exit;
   }else{
-  	header('location:inscription_entreprise.php?message=Il y a eu une erreur.&type=danger');
+  	header('location:demande.php?message=Il y a eu une erreur.&type=danger');
   	exit;
   }
 
 } else {
+  if( !isset($_POST['name']) || empty($_POST['name'])){
+  	header('location:demande.php?message=Vous devez remplir le champs non.&type=danger');
+  	exit;
+  }
   if( !isset($_POST['email']) || empty($_POST['email'])){
-  	header('location:inscription_entreprise.php?message=Vous devez remplir le champs email.&type=danger');
+  	header('location:demande.php?message=Vous devez remplir le champs email.&type=danger');
   	exit;
   }
   if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
 
-  	header('location:inscription_entreprise.php?message=Email invalide.&type=danger');
+  	header('location:demande.php?message=Email invalide.&type=danger');
   	exit;
   }
   if( !isset($_POST['phone']) || empty($_POST['phone']) ){
-  	header('location:inscription_entreprise.php?message=Vous devez remplir le champs telephone.&type=danger');
+  	header('location:demande.php?message=Vous devez remplir le champs telephone.&type=danger');
   	exit;
   }
 
   if( !isset($_POST['country']) || empty($_POST['country']) ){
-  	header('location:inscription_entreprise.php?message=Vous devez remplir le champs ville.&type=danger');
+  	header('location:demande.php?message=Vous devez remplir le champs ville.&type=danger');
   	exit;
   }
 
   if( !isset($_POST['addresse']) || empty($_POST['addresse']) ){
-  	header('location:inscription_entreprise.php?message=Vous devez remplir le champs adresse.&type=danger');
+  	header('location:demande.php?message=Vous devez remplir le champs adresse.&type=danger');
   	exit;
   }
   if( !isset($_POST['codepostale']) || empty($_POST['codepostale']) ){
-  	header('location:inscription_entreprise.php?message=Vous devez remplir le champs codepostale.&type=danger');
+  	header('location:demande.php?message=Vous devez remplir le champs codepostale.&type=danger');
   	exit;
   }
   if( !isset($_POST['CA']) || empty($_POST['CA']) ){
-  	header('location:inscription_entreprise.php?message=Vous devez remplir le champs CA.&type=danger');
+  	header('location:demande.php?message=Vous devez remplir le champs CA.&type=danger');
   	exit;
   }
   if(strlen($_POST['password']) < 6){
 
-  	header('location:inscription_entreprise.php?message=Le mot de passe doit être avoir plus de 6 caractères.&type=danger');
+  	header('location:demande.php?message=Le mot de passe doit être avoir plus de 6 caractères.&type=danger');
   	exit;
   }
 
   if(strlen($_POST['passwordcheck']) < 6){
 
-  	header('location:inscription_entreprise.php?message=Le mot de passe doit être avoir plus de 6 caractères.&type=danger');exit;
+  	header('location:demande.php?message=Le mot de passe doit être avoir plus de 6 caractères.&type=danger');exit;
   }
   if(strlen($_POST['password']) <> strlen($_POST['passwordcheck'])){
 
-  	header('location:inscription_entreprise.php?message=Vos mot de passes ne sont pas identiques.&type=danger');
+  	header('location:demande.php?message=Vos mot de passes ne sont pas identiques.&type=danger');
   	exit;
   }
 
@@ -127,7 +131,7 @@ if($_POST['res']=='partenaire'){
   $resultay = $rey->fetch();
 
   if($resultay){
-  	header('location:inscription_entreprise.php?message=Email déjà connu chez nous.&type=danger');
+  	header('location:demande.php?message=Email déjà connu chez nous.&type=danger');
   	exit;
   }
 

@@ -16,11 +16,6 @@
       </div>
       <script src="./functions.js"></script>
 
-      <form action='add_part.php' method='POST'>
-       <input class='remove' type='submit' value='Ajouter des partenaires'>
-     </form>
-
-
 
       <div class="ALL" id="ALL">
       <?php
