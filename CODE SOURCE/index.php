@@ -11,6 +11,7 @@
   <body>
     <?php include('Includes/header.php');
           include('Includes/connexion.php');
+          include('Includes/result.php');
      ?>
 
           <img class="img_up" src="Images/Img_index.png" style="width:100%;height:100%;">

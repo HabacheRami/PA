@@ -83,7 +83,6 @@ if(!isset($_SESSION['email'])){
 							</select>
 								";
 						echo "<a class='up' id='demande' href='demande.php'>Demande</script></a>";
-						echo "<a class='up' id='parte' href='partenaire.php'>Partenaire</script></a>";
 
 						echo "<a class='up' id='con' href='connexion.php'>Connexion</a>";
 							}

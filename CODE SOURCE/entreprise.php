@@ -12,7 +12,7 @@
     <?php include('Includes/header.php');?>
     <main>
 
-            <?php 
+            <?php
 
               include('Includes/connexion.php');
               ?>
@@ -22,9 +22,6 @@
               </div>
               <script src="./functions.js"></script>
 
-              <form action='add_entreprise.php'>
-               <input class='remove' type='submit' value='Ajouter une entreprise'>
-              </form>
               <div class="ALL">
 
             <?php
