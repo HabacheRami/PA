@@ -180,17 +180,6 @@ function trad() {
 
 
   if(langue==4){
-    partenaire.innerHTML="Partner";
-    con.innerHTML="Anmeldung";
-    catalogue.innerHTML = "Katalog";
-    utilisaeteur.innerHTML = "Benutzer";
-    entreprise.innerHTML = "Unternehmen";
-    entrepot.innerHTML = "Lager";
-    deconnexion.innerHTML = "Trennung";
-    produit .innerHTML = "Produkte"
-    historique.innerHTML = "Geschichte";
-    reduction.innerHTML = "Reduzierung";
-
     if (document.getElementById('parte')!=null){
       partenaire.innerHTML="Partner";
     }
