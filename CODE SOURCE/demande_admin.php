@@ -32,9 +32,6 @@
                                    <div class="name">
                                    <input name="name" type="text" " value="'.$valueq[0].'" readonly>
                                    </div>
-                                   <div class="name">
-                                   <input name="hey" type="hidden" " value="'.$valueq[0].'">
-                                   </div>
                                    <div class="type">
                                    <input name="type" type="hidden" value="partenaire" readonly>
                                    </div>

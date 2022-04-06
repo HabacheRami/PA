@@ -3,16 +3,48 @@ include('Includes/connexion.php');
 
 
 if (isset($_POST['supp'])) {
-	$q = 'DELETE FROM `demande` WHERE name =:name';
-	$req = $db->prepare($q);
-	$resultat = $req->execute([
-		'name' => $_POST['name']
-	]);
+	if($_POST['type']=='partenaire'){
+			$q = 'DELETE FROM `demande` WHERE name =:name';
+			$req = $db->prepare($q);
+			$resultat = $req->execute([
+				'name' => $_POST['name']
+			]);
 
-	if($resultat){
-		header('location:demande_admin.php?message=Demande supprimé !! &type=danger');
-		exit;
+			if($resultat){
+				header('location:demande_admin.php?message=Demande supprimé !! &type=danger');
+				exit;
+			}
 	}
+	else //($_POST['type']=='entreprise'){
+	{
+
+		$to      = $_POST["email"];
+		$subject = "Demande d'adhésion LoyaltyCard";
+		$message = "Votre demande n'a pas été accepté";
+		$headers = "Content-Type : text/plain; charset=utf-8\r\n";
+		$headers .= "From: habache.rami@gmail.com\r\n";
+
+		if(mail($to, $subject, $message, $headers)){
+		  echo "good";
+		}
+		  else {
+		    header('location:demande_admin.php?message=erreur envoie email !! &type=danger');
+		  }
+
+		$q = 'DELETE FROM `demande` WHERE name =:name';
+		$req = $db->prepare($q);
+		$resultat = $req->execute([
+			'name' => $_POST['name']
+		]);
+
+		if($resultat){
+			header('location:demande_admin.php?message=Demande supprimé !! &type=danger');
+			exit;
+		}
+
+	}
+
+
 }
 
 	if (isset($_POST['val'])) {
@@ -70,6 +102,19 @@ if (isset($_POST['supp'])) {
 			'name' =>  $_POST['name'],
 			'CA' =>  $_POST['CA']
 		]);
+
+		$to      = $_POST["email"];
+		$subject = "Demande d'adhésion LoyaltyCard";
+		$message = "Votre demande a été accepté";
+		$headers = "Content-Type : text/plain; charset=utf-8\r\n";
+		$headers .= "From: habache.rami@gmail.com\r\n";
+
+		if(mail($to, $subject, $message, $headers)){
+			echo "good";
+		}
+			else {
+				header('location:demande_admin.php?message=erreur envoie email !! &type=danger');
+			}
 
 
 		$q = 'DELETE FROM `demande` WHERE name =:name';
