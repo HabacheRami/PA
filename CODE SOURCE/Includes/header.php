@@ -53,7 +53,7 @@ include('Includes/connexion.php');
 					 if ($valueq[0]>'0'){
 						 echo " style='color:red';";
 				 }
-			 }	
+			 }
 
 				 echo">Demande</a>";
 
@@ -104,6 +104,7 @@ include('Includes/connexion.php');
 						echo "<a class='up' id='demande' href='demande.php'>Demande</script></a>";
 
 						echo "<a class='up' id='con' href='connexion.php'>Connexion</a>";
+						echo "<a class='up' id='con' href='mail.php'>mail</a>";
 							}
 			?>
 
