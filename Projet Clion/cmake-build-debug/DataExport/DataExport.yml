@@ -1,0 +1,20 @@
+%YAML 1.1
+---
+# Database
+-
+  id: 1
+  name: "marteau"
+  price: 5
+-
+  id: 2
+  name: "yoyo"
+  price: 10
+-
+  id: 3
+  name: "robot"
+  price: 15
+-
+  id: 4
+  name: "ballon"
+  price: 10
+-

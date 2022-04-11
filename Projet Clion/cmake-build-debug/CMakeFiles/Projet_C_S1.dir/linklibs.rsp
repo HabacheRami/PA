@@ -1,0 +1,1 @@
+  -LC:/Users/luc7p/CLionProjects/ProjetPA/Lib/curl-7.80.0-win64-mingw/lib  -LC:/Users/luc7p/CLionProjects/ProjetPA/Lib/mysql/lib  -llibcurl -llibmysql -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
