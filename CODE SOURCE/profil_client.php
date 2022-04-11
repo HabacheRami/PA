@@ -110,7 +110,7 @@
 
              </div>
 
-             <script src="./barcode.js" charset="utf-8"></script>
+             <script src="barcode.js" charset="utf-8"></script>
 
          </div>
 
