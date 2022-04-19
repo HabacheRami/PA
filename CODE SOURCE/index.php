@@ -3,10 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>LoyaltyCard</title>
-    <link rel="stylesheet" href="CSS/index.css">
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/header.css">
-    <link rel="stylesheet" href="CSS/clavier.css">
+    
   </head>
   <body>
     <?php include('Includes/header.php');

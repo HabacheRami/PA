@@ -104,13 +104,13 @@ include('Includes/connexion.php');
 						echo "<a class='up' id='demande' href='demande.php'>Demande</script></a>";
 
 						echo "<a class='up' id='con' href='connexion.php'>Connexion</a>";
-						echo "<a class='up' id='con' href='mail.php'>mail</a>";
 							}
 			?>
 
 			</div>
 		</ul>
 		<script src="trad.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	</nav>
 
 </header>

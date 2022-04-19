@@ -12,7 +12,10 @@
   </head>
   <body>
     <?php include('Includes/header.php');
-      include('Includes/result.php');?>
+			if(isset($_GET['message']) && !empty($_GET['message']) && isset($_GET['type']) && !empty($_GET['type'])){
+				echo '<script>alert("'. htmlspecialchars($_GET['message']) . '")</script>';
+			}
+			?>
 
       <div class="title">
         <h2>Partenaire en attente :</h2>
