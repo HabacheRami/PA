@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+html{
+  font-family: 'Viga', sans-serif;
+}
+
 .up:hover{
   text-decoration: none;
   background:   -webkit-linear-gradient(#00F0FF,#EB00FF);

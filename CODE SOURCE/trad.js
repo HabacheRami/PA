@@ -46,19 +46,15 @@ function trad() {
 
   if(langue==1){
     var $script = document.createElement("script");
-   $script.addEventListener("load", function( ){
-      console.log("externe.js a lance son load"); // 3
-   });
+   $script.addEventListener("load", function( ){});
 
-   $script.src = 'FR.js';
+   $script.src = '/Langues/FR.js';
    document.head.appendChild($script);
   }
 
   if(langue==2){
     var $script = document.createElement("script");
-   $script.addEventListener("load", function( ){
-      console.log("externe.js a lance son load"); // 3
-   });
+   $script.addEventListener("load", function( ){});
 
    $script.src = './Langues/En.js';
    document.head.appendChild($script);
@@ -66,9 +62,7 @@ function trad() {
 
   if(langue==3){
     var $script = document.createElement("script");
-   $script.addEventListener("load", function( ){
-      console.log("externe.js a lance son load"); // 3
-   });
+   $script.addEventListener("load", function( ){});
 
    $script.src = './Langues/Es.js';
    document.head.appendChild($script);
@@ -76,9 +70,7 @@ function trad() {
 
   if(langue==4){
     var $script = document.createElement("script");
-   $script.addEventListener("load", function( ){
-      console.log("externe.js a lance son load"); // 3
-   });
+   $script.addEventListener("load", function( ){});
 
    $script.src = './Langues/ALL.js';
    document.head.appendChild($script);
