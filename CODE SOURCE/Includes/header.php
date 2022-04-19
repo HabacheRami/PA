@@ -25,7 +25,7 @@ include('Includes/connexion.php');
 								<a class='up' id='pro' href='produits.php'>Produits</a>
 								<a class='up' id='red' href='reductions.php'>Reductions</a>
 								<a class='up' id='his' href='historique.php'>Historique</a>
-								<a class='up' href='achat.php'><img src='Images/achat.png' height=50px></a>
+								<a class='fas fa-shopping-cart' href='achat.php'></a>
 								<a class='up'  id='dec' href='deconnexion.php'>Déconnexion</a>
 
 								<select id='lan' onchange='trad()'>
@@ -110,7 +110,7 @@ include('Includes/connexion.php');
 			</div>
 		</ul>
 		<script src="trad.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		
 	</nav>
 
 </header>

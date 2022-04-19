@@ -5,7 +5,9 @@
     <title>LoyaltyCard</title>
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/header.css">
-    
+    <link rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />
+
   </head>
   <body>
     <?php include('Includes/header.php');
