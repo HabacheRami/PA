@@ -48,7 +48,7 @@ function trad() {
     var $script = document.createElement("script");
    $script.addEventListener("load", function( ){});
 
-   $script.src = '/Langues/FR.js';
+   $script.src = '/Langues/Fr.js';
    document.head.appendChild($script);
   }
 
@@ -72,7 +72,7 @@ function trad() {
     var $script = document.createElement("script");
    $script.addEventListener("load", function( ){});
 
-   $script.src = './Langues/ALL.js';
+   $script.src = './Langues/All.js';
    document.head.appendChild($script);
   }
 }
