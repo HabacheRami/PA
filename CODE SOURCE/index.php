@@ -5,7 +5,7 @@
     <title>LoyaltyCard</title>
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/header.css">
-    
+
   </head>
   <body>
     <?php include('Includes/header.php');
@@ -18,4 +18,4 @@
 
     <?php include('Includes/footer.php') ?>
   </body>
-</html>
+  </html>
