@@ -5,6 +5,11 @@
     <title>LoyaltyCard</title>
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/header.css">
+<<<<<<< HEAD
+=======
+    <link rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />
+>>>>>>> 69c5b0d19775285073bdaf3a8649fee8c18a05b6
 
   </head>
   <body>

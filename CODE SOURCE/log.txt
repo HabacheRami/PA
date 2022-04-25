@@ -238,6 +238,7 @@
 2022/04/13 14:36:21 - Tentative de connexion de : loyaltycard@gmail.com
 2022/04/13 14:36:40 - Tentative de connexion de : habache.rami@gmail.com
 2022/04/19 15:00:46 - Tentative de connexion de : habache.rami@gmail.com
+<<<<<<< HEAD
 2022/04/24 16:42:28 - Tentative de connexion de : loyaltycard@gmail.com
 2022/04/24 16:44:13 - Tentative de connexion de : habache.rami@gmail.com
 2022/04/24 16:45:04 - Tentative de connexion de : loyaltycard@gmail.com
@@ -258,3 +259,5 @@
 2022/04/25 12:09:02 - Tentative de connexion de : habache.rami@gmail.com
 2022/04/25 12:09:06 - Tentative de connexion de : loyaltycard@gmail.com
 2022/04/25 12:09:32 - Tentative de connexion de : habache.rami@gmail.com
+=======
+>>>>>>> 69c5b0d19775285073bdaf3a8649fee8c18a05b6
