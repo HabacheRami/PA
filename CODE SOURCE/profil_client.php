@@ -21,7 +21,7 @@
             <?php
               include('Includes/connexion.php');
 
-              $qq = 'SELECT name, firstname, phone, country, addresse, codepostale, points FROM user where email = :email';
+              $qq = 'SELECT name, firstname, phone, country, addresse, codepostale FROM user where email = :email';
               $reqq = $db->prepare($qq);
               $reqq->execute([
                 'email' => $_SESSION['email']
@@ -91,7 +91,7 @@
             include('Includes/connexion.php');
 
 
-             $q = 'SELECT card, barcode FROM loyalty where user = :user';
+             $q = 'SELECT card, barcode, points FROM loyalty where user = :user';
              $req = $db->prepare($q);
              $req->execute([
                'user' => $_SESSION['email']
@@ -119,7 +119,7 @@
 
             <?php
 
-            echo $valueq[6] . "pts => " . $valueq[6]*0.2."€";
+            echo $value[2] . "pts => " . $value[2]*0.2."€";
           }
 
              ?>

@@ -20,6 +20,7 @@
       <div class="ALL" id="ALL">
       <?php
       include('Includes/connexion.php');
+      include('Includes/result.php');
 
       $qq = 'SELECT name FROM partenaire';
       $reqq = $db->prepare($qq);

@@ -12,9 +12,8 @@
   </head>
   <body>
     <?php include('Includes/header.php');
-			if(isset($_GET['message']) && !empty($_GET['message']) && isset($_GET['type']) && !empty($_GET['type'])){
-				echo '<script>alert("'. htmlspecialchars($_GET['message']) . '")</script>';
-			}
+			include('Includes/result.php');
+			
 			?>
 
       <div class="title">
@@ -23,7 +22,7 @@
 
       <div>
       <?php
-                    $qq = 'SELECT name FROM demande where CA IS NULL';
+                    $qq = 'SELECT name, siret, email FROM demande where CA IS NULL';
                     $reqq = $db->prepare($qq);
                     $reqq->execute([]);
                      $resultsq = $reqq->fetchAll();
@@ -31,12 +30,18 @@
                      foreach ($resultsq as $key => $valueq) {
                         echo ' <form action="verif.php" class="coordonnées" method="POST">
                                   <label> Name :</label>
-                                   <br>
                                    <div class="name">
                                    <input name="name" type="text" " value="'.$valueq[0].'" readonly>
                                    </div>
+																	 <label> SIRET :</label>
+																	 <div class="siret">
+                                   <input name="siret" type="text" " value="'.$valueq[1].'" readonly>
+                                   </div>
                                    <div class="type">
                                    <input name="type" type="hidden" value="partenaire" readonly>
+                                   </div>
+																	 <div class="type">
+                                   <input name="email" type="hidden" value="'.$valueq[2].'" readonly>
                                    </div>
 
                                    <div class="bouton">
@@ -54,22 +59,33 @@
         </div>
         <div>
         <?php
-                      $qq = 'SELECT * FROM demande where CA IS NOT NULL';
+                      $qq = 'SELECT name, siret, email FROM demande where CA IS NOT NULL';
                       $reqq = $db->prepare($qq);
                       $reqq->execute([]);
                        $resultsq = $reqq->fetchAll();
 
                        foreach ($resultsq as $key => $valueq) {
-                          echo " <form action='verif.php' class='coordonnées' method='POST'>
-                          <div class='type'>
-                          <input name='type' type='hidden' value='entreprise' readonly>
-                          <input name='password' type='hidden'  value='".$valueq[3]."' readonly >
-                                  <label> Nom :</label><div class='name'><input type='text' name='name' value='".$valueq[0]."' required='required' readonly></div><label> Email :</label><div class='email'><input type='email' name='email' value='".$valueq[2]."' required readonly ></div><label>Téléphone :</label><br><div class='number'><input class='number' name='phone' type='number' max='9999999999' value='".$valueq[4]."' required readonly></div><label>Ville :</label><br><div class='country'><input type='text' name='country'value='".$valueq[1]."' required readonly></div><label>Adresse :</label><br><div class='street'><input type='text' name='addresse' value='".$valueq[5]."' required readonly></div><label>Code Postale :</label><br><div class='codepostale'><input type='number' name='codepostale' min='0' max='99999' value='".$valueq[6]."' required readonly></div><label>CA :</label><br><div class='number'><input class='CA' name='CA' type='number' min='0' value='".$valueq[7]."' required readonly></div>
-                                  <div class='bouton'>
-                                    <input class='envoie' type='submit' name='supp' value='Supprime'>
-                                    <input class='envoie' type='submit' name='val' value='Valide'>
-                                  </div>
-                                  </form>";
+                          echo ' <form action="verif.php" class="coordonnées" method="POST">
+																		<label> Name :</label>
+																		 <div class="name">
+																		 <input name="name" type="text" " value="'.$valueq[0].'" readonly>
+																		 </div>
+																		 <label> SIRET :</label>
+																		 <div class="siret">
+																		 <input name="siret" type="text" " value="'.$valueq[1].'" readonly>
+																		 </div>
+																		 <div class="type">
+																		 <input name="type" type="hidden" value="partenaire" readonly>
+																		 </div>
+																		 <div class="type">
+																		 <input name="email" type="hidden" value="'.$valueq[2].'" readonly>
+																		 </div>
+
+																		 <div class="bouton">
+																			 <input class="envoie" type="submit" name="supp" value="Supprime">
+																			 <input class="envoie" type="submit" name="val" value="Valide">
+																		 </div>
+																	</form>';
                                 }
 
                          ?>

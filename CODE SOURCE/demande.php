@@ -17,7 +17,7 @@
       </div>
 
       <div class="bodyconnect">
-        <form  action='verif_demande_p.php' method='POST'>
+        <form  action='verif_demande_p.php' method='POST' enctype="multipart/form-data">
 
           <label>Vous êtes :</label>
           <input type="radio" id="part"  onchange='ask()' name="res" value="partenaire">Partenaire</input>

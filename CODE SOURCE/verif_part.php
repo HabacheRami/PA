@@ -9,10 +9,7 @@ if(!isset($_FILES['image']) || empty($_FILES['image']['name'])){
 	exit;
 }
 
-
 include('Includes/connexion.php');
-
-
 
 $q = 'SELECT name FROM partenaire WHERE name = :name';
 $req = $db->prepare($q);
@@ -59,10 +56,11 @@ if(isset($_FILES['image']) && !empty($_FILES['image']['name'])){
 $rex = $db->prepare('INSERT INTO images (name,size,type,bin) VALUES (?,?,?,?)');
 $rex->execute(array($_POST['nom'],$_FILES['image']['size'],	$_FILES['image']['type'],file_get_contents($_FILES['image']['tmp_name'])));
 
-$q = 'INSERT INTO partenaire (name) VALUES (:name)';
+$q = 'INSERT INTO partenaire (name, siret) VALUES (:name,:siret)';
 $req = $db->prepare($q);
 $reponse = $req->execute([
-	'name' => $_POST['nom']
+	'name' => $_POST['nom'],
+	'siret' => '12345678900987'
 ]);
 
 
