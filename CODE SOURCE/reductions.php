@@ -32,7 +32,7 @@
           echo '<div class="contain">';
           echo '<h4>'. $valueq[3].'</h4>';
             echo '<div class="corps">';
-            echo '<img src="Partenaires/'. $valueq[3].'.png" class="rounded-circle">';
+            echo '<img src="export.php?name='. $valueq[3].'" class="rounded-circle">';
             echo '<p class="description">'. $valueq[2] . '</p>';
             echo '<p class="montant">' . $valueq[1] . $valueq[0] . '</p>';
           echo "</div>";
