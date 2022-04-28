@@ -63,7 +63,7 @@ include('Includes/connexion.php');
 						echo "<a class='up' id='util' href='users.php'>Utilisateurs</a>";
 						echo "<a class='up' id='ent' href='entreprise.php'>Entreprises</a>";
 						echo "<a class='up' id='pot' href='entrepot.php'>Entrepot</a>";
-						echo "<a class='up' id='dash' href='Dashboard/dashboard.php'>Dashboard</a>
+						echo "<a class='up' id='dash' href='dashboard.php'>Dashboard</a>
 
 
 						<select id='lan' onchange='trad()'>
