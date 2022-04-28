@@ -1,6 +1,6 @@
 // Fonction recherche
 function search() {
-    let input = document.getElementById('recherche').value
+    let input = document.getElementById('recherche').value;
     input=input.toLowerCase();
     let x = document.getElementsByClassName('contain');
 
