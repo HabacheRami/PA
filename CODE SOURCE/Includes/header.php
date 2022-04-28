@@ -90,7 +90,7 @@ include('Includes/connexion.php');
 						echo "<a class='up' id='prof' href='profil_entreprise.php'>Profil</a>";
 
 					}
-				}
+				
 				if($_SESSION['status'] == 'Partenaire') {
 					echo "<a class='up' id='parte'  href='partenaire.php'>Partenaire</a>";
 					echo "<a class='up'  id='util' href='userList.php'>Utilisateurs</a>";

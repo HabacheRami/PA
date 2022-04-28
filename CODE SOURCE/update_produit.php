@@ -16,13 +16,20 @@ if( !isset($_POST['quantite']) || empty($_POST['quantite']) ){
 	exit;
 }
 
-$q = 'UPDATE `produits` SET `price`= :price ,`description`= :description ,`quantite`=:quantite WHERE `name` =:name AND entrepot = :entrepot' ;
+if( !isset($_POST['categorie']) || empty($_POST['categorie']) ){
+	header('location:produit.php?message=Vous devez remplir le champs categorie.&type=danger');
+	exit;
+}
+
+
+$q = 'UPDATE `produits` SET `price`= :price ,`description`= :description ,`quantite`=:quantite, `categorie`=:categorie WHERE `name` =:name AND entrepot = :entrepot' ;
 $req = $db->prepare($q);
 $reponse = $req->execute([
 	'description' => $_POST['description'],
 	'price' => $_POST['prix'],
   'quantite' => $_POST['quantite'],
   'name' => $_POST['produit'],
+  'categorie' => $_POST['categorie'],
   'entrepot' => $_POST['entrepot']
 
 	]);

@@ -17,11 +17,11 @@
 
 
           <div class="cordo">
-            <?php  
+            <?php
 
               include('Includes/connexion.php');
 
-              $qq = 'SELECT name, description, price, quantite FROM produits where name = :name';
+              $qq = 'SELECT name, description, price, quantite, categorie FROM produits where name = :name';
               $reqq = $db->prepare($qq);
               $reqq->execute([
                 'name' => $_POST['produit']
@@ -49,8 +49,60 @@
                              </div>';
 
                              echo '<input type="hidden" name="produit" value="' .$_POST["produit"]. '">';
-                             echo '<input type="hidden" name="entrepot" value="' .$_POST["entrepot"]. '">
+                             echo '<input type="hidden" name="entrepot" value="' .$_POST["entrepot"]. '">';
 
+                             if($valueq[4] == "Alimentaire"){
+
+                               echo '<select name="categorie">
+                                         <option value="Alimentaire" selected>Alimentaire</option>
+                                         <option value="Electronique">Electronique</option>
+                                         <option value="Electronique">Electromenager</option>
+                                         <option value="Divertissement">Divertissement</option>
+                                         <option value="Autre">Autre</option>
+                                 </select>';
+                             }
+                             if($valueq[4] == "Electronique"){
+
+                               echo '<select name="categorie">
+                                         <option value="Alimentaire" >Alimentaire</option>
+                                         <option value="Electronique" selected>Electronique</option>
+                                         <option value="Electronique">Electronique</option>
+                                         <option value="Divertissement">Divertissement</option>
+                                         <option value="Autre">Autre</option>
+                                 </select>';
+                             }
+                             if($valueq[4] == "Electromenager"){
+
+                              echo ' <select name="categorie">
+                                         <option value="Alimentaire" >Alimentaire</option>
+                                         <option value="Electronique" >Electronique</option>
+                                         <option value="Electronique" selected>Electromenager</option>
+                                         <option value="Divertissement">Divertissement</option>
+                                         <option value="Autre">Autre</option>
+                                 </select>';
+                             }
+                             if($valueq[4] == "Divertissement"){
+
+                              echo ' <select name="categorie">
+                                         <option value="Alimentaire" >Alimentaire</option>
+                                         <option value="Electronique" >Electronique</option>
+                                         <option value="Electronique" >Electromenager</option>
+                                         <option value="Divertissement" selected>Divertissement</option>
+                                         <option value="Autre">Autre</option>
+                                 </select>';
+                             }
+                             if($valueq[4] == "Autre"){
+
+                              echo ' <select name="categorie">
+                                         <option value="Alimentaire" >Alimentaire</option>
+                                         <option value="Electronique" >Electronique</option>
+                                         <option value="Electronique" >Electromenager</option>
+                                         <option value="Divertissement" >Divertissement</option>
+                                         <option value="Autre" selected>Autre</option>
+                                 </select>';
+                             }
+
+                            echo '
                              <div class="bouton">
                                <center><input class="envoie" type="submit" value="Modifié"></center>
                              </div>

@@ -15,6 +15,7 @@
 
     <h2>Ajout d'un produit</h2>
 
+<div class="cordo">
 
 
             <form action="verif_prod.php" class="coordonnées" method="POST" enctype="multipart/form-data">
@@ -38,10 +39,21 @@
                   <input type="number" min="1" name="quantite" placeholder="40">
                 </div>
 
+                <label> Categorie :</label>
+                <select name="categorie">
+                           <option value="Alimentaire" >Alimentaire</option>
+                           <option value="Electronique" >Electronique</option>
+                           <option value="Electronique" >Electromenager</option>
+                           <option value="Divertissement" >Divertissement</option>
+                           <option value="Autre">Autre</option>
+                </select>
+
                 <div class="picture">
                   <label>Votre image</label>
     						  <input type="file" name="image">
                 </div>
+
+
 
                 <input type='hidden' name='entrepot' value='<?php echo $_POST['entrepot'];?>'>
 
@@ -52,6 +64,7 @@
           </form>
 
 
+        </div>
     </main>
   <?php include('Includes/footer.php'); ?>
   </body>

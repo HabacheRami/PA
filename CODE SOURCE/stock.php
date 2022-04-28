@@ -25,7 +25,7 @@
       include('Includes/connexion.php');
 
       $entrepot = $_POST['entrepot'];
-      $qq = 'SELECT name, price, description, quantite FROM produits WHERE entrepot=?';
+      $qq = 'SELECT name, price, description, quantite, categorie FROM produits WHERE entrepot=?';
       $reqq = $db->prepare($qq);
       $reqq->execute([$entrepot]);
 

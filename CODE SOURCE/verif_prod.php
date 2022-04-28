@@ -24,6 +24,10 @@ if(!isset($_FILES['image']) || empty($_FILES['image']['name'])){
 	exit;
 }
 
+if( !isset($_POST['categorie']) || empty($_POST['categorie']) ){
+	header('location:produit.php?message=Vous devez remplir le champs categorie.&type=danger');
+	exit;
+}
 
 include('Includes/connexion.php');
 
@@ -75,13 +79,14 @@ if(isset($_FILES['image']) && !empty($_FILES['image']['name'])){
 $rex = $db->prepare('INSERT INTO images (name,size,type,bin) VALUES (?,?,?,?)');
 $rex->execute(array($_POST['name'],$_FILES['image']['size'],	$_FILES['image']['type'],file_get_contents($_FILES['image']['tmp_name'])));
 
-$q = 'INSERT INTO produits (name,price,description,entrepot,quantite) VALUES (:name,:price,:description,:entrepot,:quantite)';
+$q = 'INSERT INTO produits (name,price,description,entrepot,quantite,categorie) VALUES (:name,:price,:description,:entrepot,:quantite,:categorie)';
 $req = $db->prepare($q);
 $reponse = $req->execute([
 	'name' => $_POST['name'],
 	'price' => $_POST['price'],
 	'description' => $_POST['description'],
 	'quantite' => $_POST['quantite'],
+	'categorie' => $_POST['categorie'],
 	'entrepot' => $_POST['entrepot']
 ]);
 
