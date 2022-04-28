@@ -23,6 +23,7 @@ include('Includes/connexion.php');
 				if($_SESSION['status'] == 'Client') {
 					echo "<a class='up' id='parte' href='partenaire.php'>Partenaire</script></a>
 								<a class='up' id='pro' href='produits.php'>Produits</a>
+								<a class='up' id='cat' href='catalogue.php'>Catalogue</a>
 								<a class='up' id='red' href='reductions.php'>Reductions</a>
 								<a class='up' id='his' href='historique.php'>Historique</a>
 								<a class='fas fa-shopping-cart' href='achat.php'></a>
@@ -61,7 +62,9 @@ include('Includes/connexion.php');
 						echo "<a class='up' id='cat' href='catalogue.php'>Catalogue</a>";
 						echo "<a class='up' id='util' href='users.php'>Utilisateurs</a>";
 						echo "<a class='up' id='ent' href='entreprise.php'>Entreprises</a>";
-						echo "<a class='up' id='pot' href='entrepot.php'>Entrepot</a>
+						echo "<a class='up' id='pot' href='entrepot.php'>Entrepot</a>";
+						echo "<a class='up' id='dash' href='Dashboard/dashboard.php'>Dashboard</a>
+
 
 						<select id='lan' onchange='trad()'>
 											<option id='fr' value='1'>France</option>
@@ -74,24 +77,6 @@ include('Includes/connexion.php');
 						echo "<a class='up' href='deconnexion.php'>Déconnexion</a>";
 					}
 			 	if($_SESSION['status'] == 'Entreprise') {
-					echo "<a class='up' id='parte'  href='partenaire.php'>Partenaire</a>";
-					echo "<a class='up'  id='util' href='userList.php'>Utilisateurs</a>";
-						echo "<a class='up'  id='dec' href='deconnexion.php'>Déconnexion</a>
-
-						<select id='lan' onchange='trad()'>
-											<option id='fr' value='1'>France</option>
-											<option id='en' value='2'>Anglais</option>
-											<option id='es' value='3'>Espagnol</option>
-											<option id='all' value='4'>Allemand</option>
-							</select>
-
-
-						";
-						echo "<a class='up' id='prof' href='profil_entreprise.php'>Profil</a>";
-
-					}
-				
-				if($_SESSION['status'] == 'Partenaire') {
 					echo "<a class='up' id='parte'  href='partenaire.php'>Partenaire</a>";
 					echo "<a class='up'  id='util' href='userList.php'>Utilisateurs</a>";
 						echo "<a class='up'  id='dec' href='deconnexion.php'>Déconnexion</a>
