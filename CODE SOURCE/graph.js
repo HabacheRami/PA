@@ -1,13 +1,31 @@
 const graph = document.getElementById("graph1").getContext('2d');
 
 
-
-const entrepot1 = document.getElementById("entrepot1").value;
-const entrepot2 = document.getElementById("entrepot2").value;
-const entrepot3 = document.getElementById("entrepot3").value;
-const entrepot4 = document.getElementById("entrepot4").value;
-const entrepot5 = document.getElementById("entrepot5").value;
-
+if (document.getElementById("entrepot1")!=null){
+  var entrepot1 = document.getElementById("entrepot1").value;
+}else {
+  var entrepot1 = 0;
+}
+if (document.getElementById("entrepot2")!=null){
+  var entrepot2 = document.getElementById("entrepot2").value;
+}else {
+  var entrepot2 = 0;
+}
+if (document.getElementById("entrepot3")!=null){
+  var entrepot3 = document.getElementById("entrepot3").value;;
+}else {
+  var entrepot3 = 0;
+}
+if (document.getElementById("entrepot4")!=null){
+  var entrepot4 = document.getElementById("entrepot4").value;
+}else {
+  var entrepot4 = 0;
+}
+if (document.getElementById("entrepot5")!=null){
+  var entrepot5 = document.getElementById("entrepot5").value;
+}else {
+  var entrepot5 = 0;
+}
 
 
 let myChart = new Chart(graph, {

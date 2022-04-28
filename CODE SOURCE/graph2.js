@@ -1,12 +1,31 @@
 const graph2 = document.getElementById("graph2").getContext('2d');
 
 
-
-const alimentaire1 = document.getElementById("Alimentaire").value;
-const electronique1 = document.getElementById("Electronique").value;
-const electromenager1 = document.getElementById("Electromenager").value;
-const divertissement1 = document.getElementById("Divertissement").value;
-const autre1 = document.getElementById("Autre").value;
+if (document.getElementById("Alimentaire")!=null){
+  var alimentaire = document.getElementById("Alimentaire").value;
+}else {
+  var alimentaire = 0;
+}
+if (document.getElementById("Electronique")!=null){
+  var electronique = document.getElementById("Electronique").value;
+}else {
+  var electronique = 0;
+}
+if (document.getElementById("Electromenager")!=null){
+  var electromenager = document.getElementById("Electromenager").value;;
+}else {
+  var electromenager = 0;
+}
+if (document.getElementById("Divertissement")!=null){
+  var divertissement = document.getElementById("Divertissement").value;
+}else {
+  var divertissement = 0;
+}
+if (document.getElementById("Autre")!=null){
+  var autre = document.getElementById("Autre").value;
+}else {
+  var autre = 0;
+}
 
 
 
@@ -26,11 +45,11 @@ let myChart1 = new Chart(graph2, {
       {
         label: "Quantité",
         data: [
-          alimentaire1,
-          electronique1,
-          electromenager1,
-          divertissement1,
-          autre1],
+          alimentaire,
+          electronique,
+          electromenager,
+          divertissement,
+          autre],
         backgroundColor:[
           'red',
           'blue',
