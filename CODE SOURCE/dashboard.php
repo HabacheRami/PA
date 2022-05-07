@@ -34,6 +34,10 @@
   <canvas id="graph1"></canvas>
   </div>
 
+  <div class="line">
+  <canvas id="graph3"></canvas>
+  </div>
+
 
 
   <?php
@@ -58,10 +62,21 @@
         echo '<input type="hidden" id="' . $value[0] . '" value="' . $value[1] . '">';
       }
 
+      $a = 'SELECT status, COUNT(status) FROM user WHERE status!="Admin" group by status';
+      $req = $db->prepare($a);
+      $req->execute();
+      $resultat = $req->fetchAll();
+
+      foreach ($resultat as $key => $value) {
+        echo '<input type="hidden" id="' . $value[0] . '" value="' . $value[1] . '">';
+      }
+
+
   ?>
 
   <script src="graph.js"></script>
   <script src="graph2.js"></script>
+  <script src="graph3.js"></script>
 
 </body
 </html>
