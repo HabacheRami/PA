@@ -1,4 +1,5 @@
 <?php
+session_start();
 if( !isset($_POST['montant']) || empty($_POST['montant']) ){
 	header('location:add_part.php?message=Vous devez remplir le champs nom.&type=danger');
 	exit;
@@ -45,7 +46,7 @@ $reponse = $req->execute([
 ]);
 
 if($reponse){
-	header('location:check_partenaire.php?message=Compte créé avec succès !&type=success');
+	header('location:reduction_'.$_SESSION['status'].'.php?message=Compte créé avec succès !&type=success');
 	exit;
 
 }else{

@@ -4,15 +4,15 @@
 include('Includes/connexion.php');
 
 if( !isset($_POST['description']) || empty($_POST['description']) ){
-	header('location:check_partenaire.php?message=Vous devez remplir le champs description.&type=danger');
+	header('location:reduction_'.$_SESSION['status'].'.php?message=Vous devez remplir le champs description.&type=danger');
 	exit;
 }
 if( !isset($_POST['type']) || empty($_POST['type']) ){
-	header('location:check_partenaire.php?message=Vous devez remplir le champs type.&type=danger');
+	header('location:reduction_'.$_SESSION['status'].'.php?message=Vous devez remplir le champs type.&type=danger');
 	exit;
 }
 if( !isset($_POST['montant']) || empty($_POST['montant']) ){
-	header('location:check_partenaire.php?message=Vous devez remplir le champs montant.&type=danger');
+	header('location:reduction_'.$_SESSION['status'].'.php?message=Vous devez remplir le champs montant.&type=danger');
 	exit;
 }
 
@@ -29,10 +29,10 @@ $reponse = $req->execute([
 
 
 if($reponse){
-	header('location:check_partenaire.php?message=produit modifié avec succès !&type=success');
+	header('location:reduction_'.$_SESSION['status'].'.php?message=produit modifié avec succès !&type=success');
 	exit;
 }else{
-	header('location:check_partenaire.php?message=Il y a eu une erreur.&type=danger');
+	header('location:reduction_'.$_SESSION['status'].'.php?message=Il y a eu une erreur.&type=danger');
 	exit;
 }
 

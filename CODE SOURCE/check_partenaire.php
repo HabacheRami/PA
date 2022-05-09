@@ -35,6 +35,7 @@
             <button type="submit">';
               echo '<img src="export.php?name='. $valueq[0].'" >
               <input type="hidden" name="partenaire" value="' .$valueq[0]. '">
+              <p>' .$valueq[0]. '</p>
               </button>
               </form>';
             echo "<form action='delete_part.php' method='POST'>";

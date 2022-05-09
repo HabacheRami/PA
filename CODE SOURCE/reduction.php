@@ -13,7 +13,7 @@
     <main>
 
           <div class="cordo">
-
+<?php
               include('Includes/connexion.php');
 
 
@@ -60,7 +60,7 @@
                   </div>
                   <input type="hidden" name="id" value="<?php  echo '.$valueq[0].' ?>">
                  <div class="bouton">
-                   <center><input class="envoie" type="submit" value="Ajouté"></center>
+                   <center><input class="envoie" type="submit" value="Modifé"></center>
                   </div>
             </form>';
                         }

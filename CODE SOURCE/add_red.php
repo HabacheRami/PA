@@ -1,11 +1,19 @@
-<?php session_start() ?>
+<?php session_start();
+
+
+if ( $_SESSION['status'] == 'Partenaire' ){
+  $_POST["partenaire"] = $_SESSION['name'];
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
   <head>
    <meta charset="UTF-8">
    <link rel="stylesheet" href="CSS/foot.css">
    <link rel="stylesheet" href="CSS/footer.css">
-   <title>Melimedic - Profil</title>
+   <title>LoyaltyCard</title>
    <link rel="stylesheet" href="CSS/header.css">
    <link rel="stylesheet" href="CSS/profil.css">
   </head>
@@ -16,6 +24,8 @@
 
     <h2>Ajout d'une réduction</h2>
 
+
+<div class="coordonnées">
 
 
             <form action="verif_red.php" class="coordonnées" method="POST" enctype="multipart/form-data">
@@ -42,7 +52,7 @@
                  <center><input class="envoie" type="submit" value="Ajouté"></center>
                 </div>
           </form>
-
+</div>
 
     </main>
   <?php include('Includes/footer.php'); ?>

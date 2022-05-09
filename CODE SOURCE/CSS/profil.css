@@ -5,7 +5,13 @@
   width: 50%;
   padding: 2%;
 }
-
+.coordonnées{
+  margin: 5% auto 3%;
+  background-color: #40CCEB;
+  border-radius: 20px;
+  width: 50%;
+  padding: 2%;
+}
 .coordonnees  select, .coordonnees input{
   height: 30px;
   margin : 3%;

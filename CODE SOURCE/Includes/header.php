@@ -93,6 +93,20 @@ include('Includes/connexion.php');
 						echo "<a class='up' id='prof' href='profil_entreprise.php'>Profil</a>";
 
 					}
+
+				if($_SESSION['status'] == 'Partenaire') {
+					echo "<a class='up' id='pro' href='reduction_partenaire.php'>Reduction</a>
+								<a class='up'  id='dec' href='deconnexion.php'>Déconnexion</a>
+
+								<select id='lan' onchange='trad()'>
+													<option id='fr' value='1'>France</option>
+													<option id='en' value='2'>Anglais</option>
+													<option id='es' value='3'>Espagnol</option>
+													<option id='all' value='4'>Allemand</option>
+									</select>
+
+								";
+					}
 				}
 				else {
 					echo "<a class='up' id='parte' href='partenaire.php'>Partenaire</script></a>";

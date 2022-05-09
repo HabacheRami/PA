@@ -14,9 +14,9 @@ include('Includes/connexion.php');
 
 
   if($resultat){
-    header('location:check_partenaire.php?message=entreprise Supprimer.&type=success');
+    header('location:reduction_'.$_SESSION['status'].'.php?message=reduction Supprimer.&type=success');
   	exit;
-  }else {header('location:check_partenaire.php?message=User est pas supprimer.&type=success');
+  }else {header('location:reduction_'.$_SESSION['status'].'.php?message=User est pas supprimer.&type=success');
   exit;
 }
 
