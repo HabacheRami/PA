@@ -1,4 +1,5 @@
-<?php session_start() ?>
+<?php session_start();?>
+
 <html lang="fr">
   <head>
    <meta charset="UTF-8">
@@ -106,9 +107,11 @@
               echo "<input type='hidden' id='code' value='".$barcode."'>";
              ?>
 
-             <div id="barcode">
+          
+                 <div id="barcode" name='barcode'>
 
-             </div>
+                 </div>
+
 
              <script src="barcode.js" charset="utf-8"></script>
 
