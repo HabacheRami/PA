@@ -107,7 +107,7 @@
               echo "<input type='hidden' id='code' value='".$barcode."'>";
              ?>
 
-          
+
                  <div id="barcode" name='barcode'>
 
                  </div>
@@ -115,6 +115,10 @@
 
              <script src="barcode.js" charset="utf-8"></script>
 
+             <form action="PdfPA/pdf.php"  target="_blank" class="coordonnees" method="POST">
+                <input type='hidden' name='codebarre' value='<?php echo $barcode ?>'>
+                <input class="envoie" type="submit" value="Exporte PDF">
+             </form>
          </div>
 
           <div class="convert">
@@ -128,7 +132,7 @@
              ?>
           </div>
 
-             <form action="delete.php" method="post">
+             <form action="delete.php"method="post">
                <p>Si vous voulez supprimer votre compte cliquez sur supprimer</p>
 
              <div class="bouton">

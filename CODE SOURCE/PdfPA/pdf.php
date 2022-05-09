@@ -8,16 +8,9 @@ try{
 }
 
 
-
-// Instanciation de la classe dérivée
-
-//$pdf->codeBarre($db);
-
-
-$code = '3452035939203';
 $pdf1 = new PDF_Code39();
 $pdf1->AddPage();
 $pdf1->viewTable($db);
-$pdf1->Code39(100, 190,$code,0.5,15,'C');
+$pdf1->Code39(100, 190,$_POST['codebarre'],0.5,15,'C');
 $pdf1->Output();
 ?>
