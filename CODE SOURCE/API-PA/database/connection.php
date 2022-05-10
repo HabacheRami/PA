@@ -6,9 +6,9 @@ class Database
     {
         $driver = "mysql";
         $databaseName = "pa";
-        $host = "localhost:8889";
+        $host = "192.168.1.15:8889";
         $dsn = "$driver:dbname=$databaseName;host=$host";
-        $user = "root";
+        $user = "lucas";
         $password = "root";
         $options = [PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC];
         $databaseConnection = new PDO($dsn, $user, $password, $options);
@@ -16,4 +16,3 @@ class Database
         return $databaseConnection;
     }
 }
-

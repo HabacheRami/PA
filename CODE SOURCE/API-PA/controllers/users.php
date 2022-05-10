@@ -22,8 +22,8 @@ final class User
         try {
         $json = json_decode(file_get_contents("php://input"));
         $user = UserModel::getUser([
-          "barcode" => $json->barcode,
-          "points" => $json->points,
+          "barcode" => $_GET["barcode"],
+          "points" => $_GET["points"],
         ]);
 
         $body = [
