@@ -24,12 +24,12 @@
         <div class="ALL" id="ALL">
 
 
-        <?php 
+        <?php
 
                  include('Includes/connexion.php');
 
 
-                 $q = 'SELECT name, firstname, email, points, addresse, country, codepostale, phone FROM USER WHERE status = :Cl AND entreprise = :entreprise';
+                 $q = 'SELECT name, firstname, email, addresse, country, codepostale, phone FROM USER WHERE status = :Cl AND entreprise = :entreprise';
                  $req = $db->prepare($q);
                  $req->execute([
                    'Cl' =>  'Client',
@@ -45,11 +45,10 @@
                       echo "<p>Nom : " .$value[0]. "</p>";
                       echo "<p>Prénom : " .$value[1]. "</p>";
                       echo "<p>Email : " .$value[2]. "</p>";
-                      echo "<p>Points : " .$value[3]. "pts</p>";
-                      echo "<p>Adresse : " .$value[4]. "</p>";
-                      echo "<p>Ville : " .$value[5]. "</p>";
-                      echo "<p>Code postal : " .$value[6]. "</p>";
-                      echo "<p>Téléphone : " .$value[7]. "</p>";
+                      echo "<p>Adresse : " .$value[3]. "</p>";
+                      echo "<p>Ville : " .$value[4]. "</p>";
+                      echo "<p>Code postal : " .$value[5]. "</p>";
+                      echo "<p>Téléphone : " .$value[6]. "</p>";
 
                       echo "<form action='delete_client.php' method='POST'>";
                       echo "<input type='hidden' name='email' value='" .$value[2]. "'>";

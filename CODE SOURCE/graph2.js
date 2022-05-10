@@ -49,7 +49,7 @@ let myChart1 = new Chart(graph2, {
           electronique,
           electromenager,
           divertissement,
-          autre],
+          autre,0],
         backgroundColor:[
           'red',
           'blue',

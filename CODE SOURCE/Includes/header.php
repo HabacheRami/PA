@@ -26,7 +26,7 @@ include('Includes/connexion.php');
 								<a class='up' id='cat' href='catalogue.php'>Catalogue</a>
 								<a class='up' id='red' href='reductions.php'>Reductions</a>
 								<a class='up' id='his' href='historique.php'>Historique</a>
-								<a class='fas fa-shopping-cart' href='achat.php'></a>
+								<a class='up' href='test_catalogue.php'><img src='Images/achat.png' height=50px></a>
 								<a class='up'  id='dec' href='deconnexion.php'>Déconnexion</a>
 
 								<select id='lan' onchange='trad()'>

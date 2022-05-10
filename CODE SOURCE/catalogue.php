@@ -87,7 +87,7 @@ include('includes/header.php');
   <!-- Fin de la section principale -->
 
 <?php
-  include('Includes/footerCatalogue.php')
+  include('Includes/footer.php')
 ?>
 
 </body>

@@ -29,10 +29,10 @@ $reponse = $req->execute([
 
 
 if($reponse){
-	header('location:reduction_'.$_SESSION['status'].'.php?message=produit modifié avec succès !&type=success');
+	header('location:index.php?message=produit modifié avec succès !&type=success');
 	exit;
 }else{
-	header('location:reduction_'.$_SESSION['status'].'.php?message=Il y a eu une erreur.&type=danger');
+	header('location:index.php?message=Il y a eu une erreur.&type=danger');
 	exit;
 }
 

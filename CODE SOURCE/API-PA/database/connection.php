@@ -5,11 +5,11 @@ class Database
     public static function getConnection()
     {
         $driver = "mysql";
-        $databaseName = "pa";
-        $host = "192.168.1.15:8889";
+        $databaseName = "lrt_loyaltycard";
+        $host = "152.228.218.3:3306";
         $dsn = "$driver:dbname=$databaseName;host=$host";
-        $user = "lucas";
-        $password = "root";
+        $user = "lrt";
+        $password = "Mcyh5133^";
         $options = [PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC];
         $databaseConnection = new PDO($dsn, $user, $password, $options);
 

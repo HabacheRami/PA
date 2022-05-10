@@ -46,7 +46,7 @@ $reponse = $req->execute([
 ]);
 
 if($reponse){
-	header('location:reduction_'.$_SESSION['status'].'.php?message=Compte créé avec succès !&type=success');
+	header('location:index.php?message=Compte créé avec succès !&type=success');
 	exit;
 
 }else{

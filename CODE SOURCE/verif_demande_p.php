@@ -174,7 +174,7 @@ if($_POST['res']=='partenaire'){
   if($reponse){
     $to      = $_POST['email'];
     $subject = "Demande partenaria";
-    $message = "Votre demande de partenaria a bien été envoyé";
+    $message = "Votre demande de partenariat a bien été envoyé";
     $headers = "Content-Type : text/plain; charset=utf-8\r\n";
     $headers .= "From: habache.rami@gmail.com\r\n";
 

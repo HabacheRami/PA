@@ -19,7 +19,7 @@ let myChart3 = new Chart(graph3, {
       backgroundColor:[
         'red',
         'blue',
-        'orange'
+        'yellow'
       ],
       borderColor: 'purple',
       borderWidth: 10,
