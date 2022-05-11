@@ -17,7 +17,7 @@
         <h1><strong>Liste des clients de votre entreprise</strong></h1>
 
         <?php
-        echo "Lien client: http://localhost:8888/LoyaltyCard/CODE%20SOURCE/inscription_client.php?entreprise=".$_SESSION['name']."";
+        echo "Lien client: http://localhost:8888/inscription_client.php?entreprise=".$_SESSION['name']."";
          ?>
 
         <div class="recherche">

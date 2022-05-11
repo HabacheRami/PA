@@ -112,7 +112,7 @@ foreach ($resultsq as $key => $valueq) {
   $end = $valueq[0];
 }
 
-$start = '34520359';
+$start = '3452035939';
 
 $barcode = $start.($end +1);
 
