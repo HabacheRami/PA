@@ -183,7 +183,7 @@ if (isset($_POST['supp'])) {
 			'codepostale' => $codepostale,
 			'phone' => $phone,
 			'email' => $email,
-			'status'  => 'entreprise',
+			'status'  => 'Entreprise',
 			'entreprise'  => $name
 		]);
 
